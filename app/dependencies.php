@@ -57,3 +57,7 @@ $container['em'] = function ($c) {
 $container['App\Action\HomeAction'] = function ($c) {
     return new App\Action\HomeAction($c->get('view'), $c->get('logger'));
 };
+
+$container['App\Action\PhotoAction'] = function ($c) {
+    return new App\Action\PhotoAction($c->get('em'));
+};
