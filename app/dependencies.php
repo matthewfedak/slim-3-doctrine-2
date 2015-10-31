@@ -59,5 +59,6 @@ $container['App\Action\HomeAction'] = function ($c) {
 };
 
 $container['App\Action\PhotoAction'] = function ($c) {
-    return new App\Action\PhotoAction($c->get('em'));
+    $photoResource = new \App\Resource\PhotoResource($c->get('em'));
+    return new App\Action\PhotoAction($photoResource);
 };
